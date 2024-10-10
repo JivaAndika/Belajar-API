@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coba API</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gray-100 text-gray-800 min-h-screen flex flex-col justify-center items-center"
+  >
+    <div
+      class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg border border-gray-300"
+    >
+      <h1 class="text-2xl font-bold mb-4 text-center text-blue-600">
+        Ask anything
+      </h1>
+      <div
+        id="answer"
+        class="bg-gray-200 p-4 mb-4 rounded-lg min-h-[100px] text-gray-700 border border-gray-300"
+      ></div>
+      <div class="flex flex-col gap-3">
+        <input
+          type="text"
+          name="text"
+          id="question"
+          class="flex-grow p-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-lg appearance-none outline-none focus:outline-none"
+          placeholder="Ask me"
+        />
+        <div
+          id="spinner"
+          class="animate-spin border-2 border-[#ebecf3] border-r-blue-500 opacity-80 w-6 h-6 rounded-full hidden mx-auto"
+        ></div>
+        <button
+          onclick="sendReq()"
+          id="submit"
+          disabled
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
